@@ -1,0 +1,52 @@
+---
+title: "revealjsのデモ"
+subtitle: "サブタイトル"
+author: "kazutan"
+date: "`r format(Sys.time(),'%Y/%m/%d')`"
+output:
+  revealjs::revealjs_presentation:
+    reveal_option:
+      slideNumber: true
+      center: true
+    #pandoc_args: [
+    #  '--from', 'markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures'
+    #]
+    self_contained: false
+    theme: sky
+    css: "for-revealjs.css"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(revealjs)
+library(ggplot2)
+library(dplyr)
+```
+
+# ほげ
+
+## hoge
+
+ほげほげ。
+
+## ずを描く
+
+```{r}
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width)) +
+  geom_point()
+```
+
+# ほが
+
+## ほがほが
+
+ほげほげほげ。
+
+![がぞう](pics/goal.jpg)
+
+## ふたつめの図
+
+```{r}
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width)) +
+  geom_point()
+```

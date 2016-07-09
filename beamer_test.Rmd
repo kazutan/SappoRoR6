@@ -1,0 +1,54 @@
+---
+title: "beamer_test"
+subtitle: "サブタイトルっす"
+author: "ぞうさん"
+date: "`r format(Sys.time(),'%Y/%m/%d')`"
+output:
+  beamer_presentation:
+    latex_engine: lualatex
+    toc: true
+    slide_level: 2
+    theme: Rochester
+mainfont: IPAMincho
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+
+# ほげほげ
+
+hogehogeでいってみよう。
+
+## ふがふが
+
+ああああああああああああああ。ああ。
+
+- hoge1
+- hoge2
+    - hoge2-1
+    - hoge2-2
+- hoge3
+
+## 図を書いてみる
+
+```{r}
+library(ggplot2)
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point()
+```
+
+# フガフガ
+
+ふがふがしてみよう
+
+## フガフガってなんなのよ
+
+```{r}
+library(ggplot2)
+ggplot(iris, aes(x = Species, y = Sepal.Width)) +
+  geom_boxplot()
+```
+
